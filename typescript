@@ -1,0 +1,707 @@
+Script started on Wed Apr 17 18:25:50 2019
+[?1034hbash-3.2$ git a[Ktouch writeup.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ktouch writei[Kup.txt
+bash-3.2$ git add writeup.txt
+warning: unable to access '/Users/daniphillips/.config/git/ignore': Permission denied
+warning: unable to access '/Users/daniphillips/.config/git/attributes': Permission denied
+bash-3.2$ git commit -,[Km add[K[K[K"a[KAdded empty writeup.[K"
+[master 37e010c] Added empty writeup
+warning: unable to access '/Users/daniphillips/.config/git/attributes': Permission denied
+warning: unable to access '/Users/daniphillips/.config/git/attributes': Permission denied
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 writeup.txt
+bash-3.2$ sudo chown -R dida /us[K[KUsers/dida
+Password:
+chown: dida: illegal user name
+bash-3.2$ suco [K[K[K[K[Ksudo -u www-data -H git clone -v git@....../test.git
+sudo: unknown user: www-data
+sudo: unable to initialize policy plugin
+bash-3.2$ su jira -c ./start-stash.sh
+Password:
+su: Sorry
+bash-3.2$ su jira -c ./start-stash.sh
+Password:
+su: Sorry
+bash-3.2$ exit
+exit
+
+Script done on Wed Apr 17 18:31:29 2019
+Script started on Wed Apr 17 18:38:50 2019
+[?1034hbash-3.2$ git add writeup.txt
+bash-3.2$ git commit -m "Added part 1 (names) to writeup"
+[master 1d16c6f] Added part 1 (names) to writeup
+ 1 file changed, 1 insertion(+)
+bash-3.2$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31msrc/main/java/lab1/typescript[m
+	[31mtypescript[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git add writeip/[K[K[Kup/[K.txt
+bash-3.2$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   writeup.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31msrc/main/java/lab1/typescript[m
+	[31mtypescript[m
+
+bash-3.2$ git push origin master
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   37e010c..1d16c6f  master -> master
+bash-3.2$ touch username.txt
+bash-3.2$ git add username.txt
+bash-3.2$ git commit -git[K[K[Km "Added u[Knames to [K[K[K[K[K[K[K[K[Kpart 2 9[K(usernames) to username.txt"
+[master 80f5d3d] Added part 2 (usernames) to username.txt
+ 2 files changed, 1 insertion(+)
+ create mode 100644 username.txt
+bash-3.2$ git push origin ms[Kaster
+Enumerating objects: 6, done.
+Counting objects:  16% (1/6)   Counting objects:  33% (2/6)   Counting objects:  50% (3/6)   Counting objects:  66% (4/6)   Counting objects:  83% (5/6)   Counting objects: 100% (6/6)   Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  25% (1/4)   Writing objects:  50% (2/4)   Writing objects:  75% (3/4)   Writing objects: 100% (4/4)   Writing objects: 100% (4/4), 423 bytes | 423.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   1d16c6f..80f5d3d  master -> master
+bash-3.2$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout    Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+bash-3.2$ git[K[K[Ktouch haha.txt
+bash-3.2$ git ceh[K[Khecoou[K[K[Kkout [K
+M	username.txt
+Your branch is up to date with 'origin/master'.
+bash-3.2$ git s[K[K checkout username.txt
+bash-3.2$ git reset
+bash-3.2$ git rm haha.txt
+fatal: pathspec 'haha.txt' did not match any files
+bash-3.2$ git add haha.txt
+bash-3.2$ git commit -m "Crrea[K[K[Ka[Keated file to delete al[K[Klater"
+[master 712f955] Created file to delete later
+ 1 file changed, 1 insertion(+)
+ create mode 100644 haha.txt
+bash-3.2$ git pusj origin master
+git: 'pusj' is not a git command. See 'git --help'.
+
+The most similar command is
+	push
+bash-3.2$ git push origin masy[Ktr
+error: src refspec mastr does not match any.
+[31merror: failed to push some refs to 'https://github.com/CSCI241Spring2019/lab-1-daniphillips228'
+[mbash-3.2$ git o[Kpush origin master
+Enumerating objects: 4, done.
+Counting objects:  25% (1/4)   Counting objects:  50% (2/4)   Counting objects:  75% (3/4)   Counting objects: 100% (4/4)   Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   80f5d3d..712f955  master -> master
+bash-3.2$ gi [Kt mv haha.txt
+usage: git mv [<options>] <source>... <destination>
+
+    -v, --verbose         be verbose
+    -n, --dry-run         dry run
+    -f, --force           force move/rename even if target exists
+    -k                    skip move/rename errors
+
+bash-3.2$ -f
+bash: -f: command not found
+bash-3.2$ git mv -f
+usage: git mv [<options>] <source>... <destination>
+
+    -v, --verbose         be verbose
+    -n, --dry-run         dry run
+    -f, --force           force move/rename even if target exists
+    -k                    skip move/rename errors
+
+bash-3.2$ git mv -f haha.txt
+usage: git mv [<options>] <source>... <destination>
+
+    -v, --verbose         be verbose
+    -n, --dry-run         dry run
+    -f, --force           force move/rename even if target exists
+    -k                    skip move/rename errors
+
+bash-3.2$ git rm haha.txt
+rm 'haha.txt'
+bash-3.2$ git push origin ms[Kaster
+Everything up-to-date
+bash-3.2$ git rm.[K haha.txt
+fatal: pathspec 'haha.txt' did not match any files
+bash-3.2$ git push origin master
+Everything up-to-date
+bash-3.2$ git rm haha.txt
+fatal: pathspec 'haha.txt' did not match any files
+bash-3.2$ git checkout haha.txt
+error: pathspec 'haha.txt' did not match any file(s) known to git
+bash-3.2$ git checkout
+D	haha.txt
+M	username.txt
+Your branch is up to date with 'origin/master'.
+bash-3.2$ git c[Kreset
+Unstaged changes after reset:
+D	haha.txt
+M	username.txt
+bash-3.2$ git rm haha.tc[Kxst[K[Kt
+rm 'haha.txt'
+bash-3.2$ git push origin master
+Everything up-to-date
+bash-3.2$ git add -u
+bash-3.2$ git staut[K[Ktus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mdeleted:    haha.txt[m
+	[32mmodified:   username.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31msrc/main/java/lab1/typescript[m
+	[31mtypescript[m
+
+bash-3.2$ git push[K[K[K[Kpsuh [K[K[K[Kis[K[Kus [Kh [K
+Everything up-to-date
+bash-3.2$ git commie [K[K[Kt[Kt[Kit -m "Romvi[Ke[K[K[K[Kemove haha.txt"
+[master 15abe49] Remove haha.txt
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 haha.txt
+bash-3.2$ git push origin master
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 388 bytes | 388.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   712f955..15abe49  master -> master
+bash-3.2$ git blame writeup.txt
+[?1h=1d16c6fa (Danielle Phillips 2019-04-17 18:40:02 -0700 1) Danielle Phillips[m
+80f5d3d6 (Danielle Phillips 2019-04-17 18:42:31 -0700 2) Hobby: Dancing for SINI[m -HHA[m
+[K[?1l>bash-3.2$ git log
+[?1h=[33mcommit 15abe49371aaaf4db1404b4427fe52379f508a8d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31m[m [33m[m[33m[m[1;36m[m[1;32m[m[33m[m[1;31m[m[33m[m[1;31morigin/HEAD[m[33m)[m[m
+Author: Danielle Phillips <philli38@wwu.edu>[m
+Date:   Wed Apr 17 19:00:16 2019 -0700[m
+[m
+    Remove haha.txt[m
+[m
+[33mcommit 712f9555938f69fd4160b6f15fe589243ab71e11[m[m
+Author: Danielle Phillips <philli38@wwu.edu>[m
+Date:   Wed Apr 17 18:47:36 2019 -0700[m
+[m
+    Created file to delete later[m
+[m
+[33mcommit 80f5d3d68608264aa470171462ad1380d55389e4[m[m
+Author: Danielle Phillips <philli38@wwu.edu>[m
+Date:   Wed Apr 17 18:42:31 2019 -0700[m
+[m
+    Added part 2 (usernames) to username.txt[m
+[m
+[33mcommit 1d16c6fa18d5ffe9dd9261f7dad37a88e665b920[m[m
+Author: Danielle Phillips <philli38@wwu.edu>[m
+Date:   Wed Apr 17 18:40:02 2019 -0700[m
+[m
+:[K[K[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[24;1H[K[K:[K[K    Added part 1 (names) to writeup[m
+[m
+[33mcommit 37e010ce097ec5c29ba551dfcdaaa782ba79a697[m[m
+Author: Danielle Phillips <philli38@wwu.edu>[m
+Date:   Wed Apr 17 18:26:49 2019 -0700[m
+[m
+    Added empty writeup[m
+[m
+[33mcommit 7f0ec57ebbb920320db6aa468395db84a9eb95b5[m[m
+Author: Danielle Phillips <philli38@wwu.edu>[m
+Date:   Wed Apr 17 18:22:44 2019 -0700[m
+[m
+:[K[K[HM    Created file to delete later[m
+[HM[m
+[HMDate:   Wed Apr 17 18:47:36 2019 -0700[m
+[HMAuthor: Danielle Phillips <philli38@wwu.edu>[m
+[HM[33mcommit 712f9555938f69fd4160b6f15fe589243ab71e11[m[m
+[HM[m
+[HM    Remove haha.txt[m
+[HM[m
+[HMDate:   Wed Apr 17 19:00:16 2019 -0700[m
+[HMAuthor: Danielle Phillips <philli38@wwu.edu>[m
+[HM[33m[m[33m[m[1;36m[m[1;32m[m[33m[m[1;31m[m[33m[m[1;31morigin/HEAD[m[33m)[m[m
+[HM[33mcommit 15abe49371aaaf4db1404b4427fe52379f508a8d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31m[m[24;1H[K:[K[K:[K[K[K:[K[K[7mNo next tag  (press RETURN)[27m[24;1H[K[K:[K[K    Added part 1 (names) to writeup[m
+:[K[K[m
+:[K[K[33mcommit 37e010ce097ec5c29ba551dfcdaaa782ba79a697[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Wed Apr 17 18:26:49 2019 -0700[m
+:[K[K[m
+:[K[K    Added empty writeup[m
+:[K[K[m
+:[K[K[33mcommit 7f0ec57ebbb920320db6aa468395db84a9eb95b5[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Wed Apr 17 18:22:44 2019 -0700[m
+:[K[K[m
+:[K[K    removing accidental files[m
+:[K[K[m
+:[K[K[33mcommit 8c8ce86e060a25dcc480dd60116d2e2aa973b9dd[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Wed Apr 17 18:21:17 2019 -0700[m
+:[K[K[m
+:[K[K    im done with this lab[m
+:[K[K[m
+:[K[K[33mcommit df806c8b2a209dd9043092b9f8f0f62cf0245066[m[m
+:[K[KAuthor: Danielle Phillips <daniphillips228@gmail.com>[m
+:[K[KDate:   Wed Apr 17 18:10:37 2019 -0700[m
+:[K[K[m
+:[K[K    deleted files[m
+:[K[K[m
+:[K[K[33mcommit d18d11d9e894a6b3f904b4423a66a2ee2f4faffe[m[m
+:[K[KAuthor: Danielle Phillips <daniphillips228@gmail.com>[m
+:[K[KDate:   Wed Apr 17 13:52:44 2019 -0700[m
+:[K[K[m
+:[K[K    Added favorite song to writeup[m
+:[K[K[m
+:[K[K[33mcommit c842af260a36913f53918769c6a8fd3532e943d2[m[m
+:[K[KAuthor: Danielle Phillips <daniphillips228@gmail.com>[m
+:[K[KDate:   Wed Apr 17 10:40:19 2019 -0700[m
+:[K[K[m
+:[K[K    added favorite song to writeup[m
+:[K[K[m
+:[K[K[33mcommit ab5c11592d275629a57ab8a03c2d0196f093ecc5[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Thu Apr 11 11:26:23 2019 -0700[m
+:[K[K[m
+:[K[K    Added (username) to username[m
+:[K[K[m
+:[K[K[33mcommit 606e23b6140a971c08c7c78c7aa260afc164cd29[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Thu Apr 11 11:18:16 2019 -0700[m
+:[K[K[m
+:[K[K    added empty username[m
+:[K[K[m
+:[K[K[33mcommit 546fe8b444a4ff87062aa4f0e6e36b8a7b07dc7f[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Thu Apr 11 11:15:12 2019 -0700[m
+:[K[K[m
+:[K[K    Added part 2 (hobby) to writeup[m
+:[K[K[m
+:[K[K[33mcommit 6fcd8f9d8f2eafdb067746bf2e180b0a9b3c0136[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Thu Apr 11 10:58:27 2019 -0700[m
+:[K[K[m
+:[K[K    Added empty writeup[m
+:[K[K[m
+:[K[K[33mcommit 9401aa8130aaf535b29d18026490ee923c1bec60[m[m
+:[K[KAuthor: daniphillips228 <49317573+daniphillips228@users.noreply.github.com>[m
+:[K[KDate:   Thu Apr 11 10:44:14 2019 -0700[m
+:[K[K[m
+:[K[K    Update writeup.txt[m
+:[K[K[m
+:[K[K[33mcommit f98995a415659aae31918bedba55c2aeb487ccea[m[m
+:[K[KAuthor: Danielle Phillips <philli38@wwu.edu>[m
+:[K[KDate:   Thu Apr 11 10:36:43 2019 -0700[m
+:[K[K[m
+:[K[K    Added empty writeup[m
+:[K[K[m
+:[K[K[33mcommit 1523c09e41bb264a6f420fcd78d1a7d6e44a5340[m[m
+:[K[KAuthor: majeskn <majeskn@wwu.edu>[m
+:[K[KDate:   Mon Jan 7 20:49:19 2019 -0800[m
+:[K[K[m
+:[K[K    Adding setup for gradle[m
+:[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[K[7m(END)[27m[K[K[H[2J[HM[m
+[HMDate:   Wed Apr 17 18:40:02 2019 -0700[m
+[HMAuthor: Danielle Phillips <philli38@wwu.edu>[m
+[HM[33mcommit 1d16c6fa18d5ffe9dd9261f7dad37a88e665b920[m[m
+[HM[m
+[HM    Added part 2 (usernames) to username.txt[m
+[HM[m
+[HMDate:   Wed Apr 17 18:42:31 2019 -0700[m
+[HMAuthor: Danielle Phillips <philli38@wwu.edu>[m
+[HM[33mcommit 80f5d3d68608264aa470171462ad1380d55389e4[m[m
+[HM[m
+[HM    Created file to delete later[m
+[HM[m
+[HMDate:   Wed Apr 17 18:47:36 2019 -0700[m
+[HMAuthor: Danielle Phillips <philli38@wwu.edu>[m
+[HM[33mcommit 712f9555938f69fd4160b6f15fe589243ab71e11[m[m
+[HM[m
+[HM    Remove haha.txt[m
+[HM[m
+[HMDate:   Wed Apr 17 19:00:16 2019 -0700[m
+[HMAuthor: Danielle Phillips <philli38@wwu.edu>[m
+[HM[33m[m[33m[m[1;36m[m[1;32m[m[33m[m[1;31m[m[33m[m[1;31morigin/HEAD[m[33m)[m[m
+[HM[33mcommit 15abe49371aaaf4db1404b4427fe52379f508a8d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31m[m[24;1H[K:[K[K:[K[K[7mNo next tag  (press RETURN)[27m[24;1H[K[K[K:[K[K[K:[K[K[7mNo next tag  (press RETURN)[27m[24;1H[K[K[7mNo next tag  (press RETURN)[27m[24;1H[K[K:[K[K[7mNo next tag  (press RETURN)[27m[24;1H[K[K    Added part 1 (names) to writeup[m
+:[K[K[m
+:[K[K:[K[K:[K[K:[K[K[?1l>bash-3.2$ git diff
+[?1h=[K[?1l>bash-3.2$ git diff
+[?1h=[K[?1l>bash-3.2$ git add userna,[Kme.txt
+bash-3.2$ git -commit[K[K[K[K[K[Kc[K[Kcimm[K[K[Kommit - [Km "Add usernames to username.txt"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+	[31msrc/main/java/lab1/typescript[m
+	[31mtypescript[m
+
+nothing added to commit but untracked files present
+bash-3.2$ git push origin master
+Everything up-to-date
+bash-3.2$ git add usernan[Kme/[K.txt
+bash-3.2$ git commit -m "Adding 1 line"
+[master f5d991a] Adding 1 line
+ 1 file changed, 1 insertion(+)
+bash-3.2$ git push origin master
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   15abe49..f5d991a  master -> master
+bash-3.2$ git add username.txt
+bash-3.2$ git p[Kcommit -m a[K:[K"Adding usernames to usernt[Kame.txt"
+[master a81a6fd] Adding usernames to username.txt
+ 1 file changed, 1 deletion(-)
+bash-3.2$ git push org[Kigin master
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 306 bytes | 306.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   f5d991a..a81a6fd  master -> master
+bash-3.2$ git add writeup.txt 
+bash-3.2$ git commit -m "Adding H[Khobby to writeup.txt"
+[master fee135b] Adding hobby to writeup.txt
+ 1 file changed, 1 insertion(+)
+bash-3.2$ git push origin master
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   a81a6fd..fee135b  master -> master
+bash-3.2$ git checkout -b question3
+M	writeup.txt
+Switched to a new branch 'question3'
+bash-3.2$ git commie - [Ka 0[K-m "Added hobby y[Kto BR[K[Kwriteup.txt in q3 branch"
+git: 'commie' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+bash-3.2$ git commie -a -m "Added hobby to writeup.txt in q3 branch"[C[1P[1@t
+[question3 e7409ef] Added hobby to writeup.txt in q3 branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bash-3.2$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ merg[K[K[K[Kgit merge question3
+Updating fee135b..e7409ef
+Fast-forward
+ writeup.txt | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bash-3.2$ git checkout[K[K[K[K[K[Keckout question3
+Switched to branch 'question3'
+bash-3.2$ git add -m "Added Hob[Kbby to wru[K[Kriteup.txt"
+error: unknown switch `m'
+usage: git add [<options>] [--] <pathspec>...
+
+    -n, --dry-run         dry run
+    -v, --verbose         be verbose
+
+    -i, --interactive     interactive picking
+    -p, --patch           select hunks interactively
+    -e, --edit            edit current diff and apply
+    -f, --force           allow adding otherwise ignored files
+    -u, --update          update tracked files
+    --renormalize         renormalize EOL of tracked files (implies -u)
+    -N, --intent-to-add   record only the fact that the path will be added later
+    -A, --all             add changes from all tracked and untracked files
+    --ignore-removal      ignore paths removed in the working tree (same as --no-all)
+    --refresh             don't add, only refresh the index
+    --ignore-errors       just skip files which cannot be added because of errors
+    --ignore-missing      check if - even missing - files are ignored in dry run
+    --chmod (+|-)x        override the executable bit of the listed files
+
+bash-3.2$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+bash-3.2$ git push origin master
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)   Counting objects:  40% (2/5)   Counting objects:  60% (3/5)   Counting objects:  80% (4/5)   Counting objects: 100% (5/5)   Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)   Writing objects:  66% (2/3)   Writing objects: 100% (3/3)   Writing objects: 100% (3/3), 358 bytes | 358.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   fee135b..e7409ef  master -> master
+bash-3.2$ git branch -d qur[Kestoin[K[K[Kion3
+Deleted branch question3 (was e7409ef).
+bash-3.2$ git branch [K[K[K[K[K[K[Kcheckout -b question3
+Switched to a new branch 'question3'
+bash-3.2$ git commit -a -m "Added New[K[K[Knew branch"
+On branch question3
+Untracked files:
+	[31msrc/main/java/lab1/typescript[m
+	[31mtypescript[m
+
+nothing added to commit but untracked files present
+bash-3.2$ git push qurs[K[Kestion3
+fatal: 'question3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bash-3.2$ got push origin master
+bash: got: command not found
+bash-3.2$ git push origin master
+Everything up-to-date
+bash-3.2$ git add writep[Kup.txt
+bash-3.2$ git g[Kcoomit[K[K[K[Kmmit -adde[K[K[K[Km "Added favorite song ot wr[K[K[K[K[Kto writeup"
+On branch question3
+Untracked files:
+	[31msrc/main/java/lab1/typescript[m
+	[31mtypescript[m
+
+nothing added to commit but untracked files present
+bash-3.2$ git push
+fatal: The current branch question3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin question3
+
+bash-3.2$ git push question3
+fatal: 'question3' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bash-3.2$ git push -u origin --all
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'question3' on GitHub by visiting:[K
+remote:      https://github.com/CSCI241Spring2019/lab-1-daniphillips228/pull/new/question3[K
+remote: 
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+ * [new branch]      question3 -> question3
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+Branch 'question3' set up to track remote branch 'question3' from 'origin'.
+bash-3.2$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ git merge question3
+Already up to date.
+bash-3.2$ i[Kgit pull
+Already up to date.
+bash-3.2$ git checkout master
+Already on 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ git pull master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+bash-3.2$ git pull origin master
+From https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+bash-3.2$ git checkout qe[Kuies[K[K[Kestion3
+Switched to branch 'question3'
+Your branch is up to date with 'origin/question3'.
+bash-3.2$ git merge origin master
+Already up to date.
+bash-3.2$ git push
+Everything up-to-date
+bash-3.2$ git brsn[Ka[K[Kanch -d question3
+error: Cannot delete branch 'question3' checked out at '/Users/daniphillips/csci241/lab-1-daniphillips228'
+bash-3.2$ chec[K[K[K[Kgiy ch[K[K[K[Kt ceh[K[Kheckout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+bash-3.2$ git branch -d w[Kqe[Kuestion3
+Deleted branch question3 (was e7409ef).
+bash-3.2$ git push origin master
+Everything up-to-date
+bash-3.2$ i[Kgit push origin --delete or[K[Kquestion3
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+ - [deleted]         question3
+bash-3.2$ exit
+exit
+
+Script done on Wed Apr 17 19:22:04 2019
+Script started on Thu Apr 18 10:07:16 2019
+[?1034hbash-3.2$ gradle run[K[K[K[K build
+
+
+[2A[1m<[0;1m-------------> 0% CONFIGURING [0s][m[35D[1B[1m> root project[m[14D[1B[2A[0K
+[32;1mBUILD SUCCESSFUL[0;39m in 0s
+5 actionable tasks: 5 up-to-date
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1m> root project[m[14D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hbash-3.2$ gradle run
+
+[1A
+[1m> Task :run[m
+Hello World!
+
+[1A[1m<[0;32;1m=============[0;39;1m> 100% EXECUTING [0s][m[35D[1B[1A[0K
+[32;1mBUILD SUCCESSFUL[0;39m in 0s
+2 actionable tasks: 1 executed, 1 up-to-date
+[0K
+[1A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1A[2K[0m[?12l[?25hbash-3.2$ gradle rn[Kun --args [K="friend:[K"
+
+
+[2A[1m<[0;1m-------------> 0% EXECUTING [0s][m[33D[1B[1m> :compileJava[m[14D[1B[2A[1m<[0;32;1m=========[0;39;1m----> 75% EXECUTING [0s][m[34D[1B[1m> :run[m[0K[6D[1B[2A[0K
+[1m> Task :run[m
+Hello 
+friend
+
+[32;1mBUILD SUCCESSFUL[0;39m in 0s
+2 actionable tasks: 2 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1m> :run[m[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hbash-3.2$ gradle run --args="friend"
+
+[1A
+[31;1m> Task :compileJava[0;39m[31m FAILED[39m
+/Users/daniphillips/csci241/lab-1-daniphillips228/src/main/java/lab1/Hello.java:5: error: no suitable method found for println(String,String)
+        System.out.println("Hello ", args [0]);
+                  ^
+    method PrintStream.println() is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(boolean) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(char) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(int) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(long) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(float) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(double) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(char[]) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(String) is not applicable
+      (actual and formal argument lists differ in length)
+    method PrintStream.println(Object) is not applicable
+      (actual and formal argument lists differ in length)
+1 error
+
+[1A[1m<[0;31;1m===[0;39;1m----------> 25% EXECUTING [0s][m[34D[1B[1A[0K
+[31mFAILURE: [39m[31mBuild failed with an exception.[39m
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+[33m> [39mCompilation failed; see the compiler error output for details.
+
+* Try:
+Run with [1m--stacktrace[m option to get the stack trace. Run with [1m--info[m or [1m--debug[m option to get more log output. Run with [1m--scan[m to get full insights.
+
+* Get more help at [1mhttps://help.gradle.org[m
+
+[31;1mBUILD FAILED[0;39m in 0s
+1 actionable task: 1 executed
+[0K
+[1A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1A[2K[0m[?12l[?25hbash-3.2$ gradle run --args="friend"
+
+
+[2A[1m<[0;32;1m=========[0;39;1m----> 75% EXECUTING [0s][m[34D[1B[1m> :run[m[6D[1B[2A[0K
+[1m> Task :run[m
+Hello
+friend
+
+[32;1mBUILD SUCCESSFUL[0;39m in 0s
+2 actionable tasks: 2 executed
+[0K
+[0K
+[2A[1m<[0;1m-------------> 0% WAITING[m[26D[1B[1m> :run[m[6D[1B[2A[2K[1B[2K[1A[0m[?12l[?25hbash-3.2$ git add srec/[K[K[Kc/main/java/lab1/HE[Kello.java
+bash-3.2$ git commit -m "Hellow[K now prints command ling[Ke arg"
+[master 94c2467] Hello now prints command line arg
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+bash-3.2$ git push origin master
+Enumerating objects: 13, done.
+Counting objects:   7% (1/13)   Counting objects:  15% (2/13)   Counting objects:  23% (3/13)   Counting objects:  30% (4/13)   Counting objects:  38% (5/13)   Counting objects:  46% (6/13)   Counting objects:  53% (7/13)   Counting objects:  61% (8/13)   Counting objects:  69% (9/13)   Counting objects:  76% (10/13)   Counting objects:  84% (11/13)   Counting objects:  92% (12/13)   Counting objects: 100% (13/13)   Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects:  33% (1/3)   Compressing objects:  66% (2/3)   Compressing objects: 100% (3/3)   Compressing objects: 100% (3/3), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 496 bytes | 496.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)   [Kremote: Resolving deltas:  50% (1/2)   [Kremote: Resolving deltas: 100% (2/2)   [Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/CSCI241Spring2019/lab-1-daniphillips228
+   e7409ef..94c2467  master -> master
+bash-3.2$ end
+bash: end: command not found
+bash-3.2$ exit
+exit
+
+Script done on Thu Apr 18 10:34:33 2019
